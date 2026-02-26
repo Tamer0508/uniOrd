@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>University</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<header>
+    <div class="logo">UniOrda</div>
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="universities.html">Университеты</a>
+    </nav>
+</header>
+    
+
+<div class="container">
+
+    <div class="top-section">
+        <img id="image" class="uni-image">
+        
+        <div class="main-info">
+            <h1 id="name"></h1>
+            <p id="city" class="city"></p>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-item"><strong>Язык:</strong> <span id="language"></span></div>
+        <div class="info-item"><strong>Мин. балл:</strong> <span id="min_score"></span></div>
+        <div class="info-item"><strong>Военная кафедра:</strong> <span id="military"></span></div>
+        <div class="info-item"><strong>Общежитие:</strong> <span id="academ"></span></div>
+        <div class="info-item"><strong>Вступительный экзамен:</strong> <span id="entry_exam"></span></div>
+        <div class="info-item"><strong>Цена:</strong> <span id="price"></span></div>
+        <div class="info-item"><strong>Длительность:</strong> <span id="dur"></span></div>
+        <div class="info-item"><strong>3D Тур:</strong> <span id="three_d"></span></div>
+        <div class="info-item"><strong>Сайт:</strong> <span id="link"></span></div>
+    </div>
+
+    <div class="description">
+        <h2>Описание</h2>
+        <p id="description"></p>
+    </div>
+
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const id = params.get('id');
+
+fetch(`/university/${id}`)
+    .then(res => res.json())
+    .then(data => {
+
+        document.getElementById('name').innerText = data.name;
+        document.getElementById('city').innerText = data.city;
+        document.getElementById('language').innerText = data.language;
+        document.getElementById('min_score').innerText = data.min_score;
+        document.getElementById('military').innerText = data.military ? "Есть" : "Нет";
+        document.getElementById('academ').innerText = data.academ ? "Есть" : "Нет";
+        document.getElementById('entry_exam').innerText = data.entry_exam;
+        document.getElementById('price').innerText = data.price + " ₸";
+        document.getElementById('dur').innerText = data.dur + " года";
+        document.getElementById('description').innerText = data.description;
+
+        document.getElementById('image').src = data.image;
+
+        document.getElementById('three_d').innerHTML = data.three_d 
+            ? `<a href="${data.three_d}" target="_blank">Открыть 3D тур</a>`
+            : "Нет";
+
+        document.getElementById('link').innerHTML = data.link 
+            ? `<a href="${data.link}" target="_blank">Перейти на сайт</a>`
+            : "Нет";
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6fa;
+}
+
+/* HEADER */
+
+header {
+    background: #1f2a7c;
+    padding: 20px 50px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* FILTER */
+
+.filter-section {
+    background: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.filters {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.filters select,
+.filters input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    min-width: 180px;
+}
+
+.filters button {
+    padding: 10px 20px;
+    background: #1f2a7c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* CARDS */
+
+.universities-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 40px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 15px;
+}
+
+/* UNIVERSITY PAGE */
+
+.uni-hero {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.uni-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.uni-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 40px;
+    background: linear-gradient(to top, rgba(31,42,124,0.9), transparent);
+    color: white;
+}
+
+.uni-content {
+    padding: 50px;
+}
+
+.info-box {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+/* MAIN HERO */
+
+.main-hero {
+    height: 85vh;
+    background: linear-gradient(to right, #1f2a7c, #2e3dbf);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.main-hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.main-hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.main-btn {
+    padding: 12px 30px;
+    background: white;
+    color: #1f2a7c;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.main-btn:hover {
+    background: #e0e0e0;
+}
+
+/* FEATURES */
+
+.features {
+    padding: 80px 40px;
+    text-align: center;
+    background: #f4f6fa;
+}
+
+.features h2 {
+    margin-bottom: 50px;
+    font-size: 32px;
+}
+
+.feature-cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background: white;
+    padding: 30px;
+    width: 280px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+}

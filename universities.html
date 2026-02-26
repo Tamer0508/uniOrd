@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Университеты</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">UniOrda</div>
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="universities.html">Университеты</a>
+    </nav>
+</header>
+
+<section class="filter-section">
+    <h1>Поиск университетов</h1>
+
+    <div class="filters">
+        <select id="subjects">
+            <option value="">Связка предметов</option>
+            <option value="bio-chem">Биология + Химия</option>
+            <option value="math-phys">Математика + Физика</option>
+        </select>
+
+        <select id="language">
+            <option value="">Язык обучения</option>
+            <option value="ru">Русский</option>
+            <option value="kz">Казахский</option>
+            <option value="en">Английский</option>
+        </select>
+
+        <select id="city">
+            <option value="">Город</option>
+            <option value="astana">Астана</option>
+            <option value="almaty">Алматы</option>
+        </select>
+
+        <input type="number" id="score" placeholder="Пороговый балл">
+
+        <button onclick="filterUniversities()">Найти</button>
+    </div>
+</section>
+
+<section class="universities-container" id="universitiesContainer">
+    
+    <a href="university.html?id=1" class="card">
+        <img src="images/astana-med.jpg" alt="">
+        <div class="card-info">
+            <h2>Astana Medical University</h2>
+            <p>Астана</p>
+        </div>
+    </a>
+
+    <a href="university.html?id=2" class="card">
+        <img src="images/kaznu.jpg" alt="">
+        <div class="card-info">
+            <h2>KazNU</h2>
+            <p>Алматы</p>
+        </div>
+    </a>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

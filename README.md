@@ -1,4 +1,4 @@
-# UniStat — University Comparison Platform
+# UniOrda — University Comparison Platform
 
 A lightweight web application designed to help students browse, filter, and compare universities based on key performance indicators stored in a database.
 
